@@ -1,0 +1,104 @@
+{
+	"_version": "1.1.0",
+	"sap.app": {
+		"_version": "1.3.0",
+		"id": "smercul.sd.sl",
+		"type": "application",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{XTIT_FIRST}}",
+		"description": "{{XTIT_DESC}}",
+		"tags": {
+			"keywords": ["{{XTIT_KEY}}"]
+		},
+		"ach": "SD-SL"
+	},
+	"sap.ui": {
+		"_version": "1.3.0",
+		"technology": "UI5",
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		},
+		"supportedThemes": ["sap_belize", "sap_bluecrystal"],
+		"icons": {
+			"icon": "sap-icon://iphone"
+		}
+	},
+	"sap.ui5": {
+		"_version": "1.2.0",
+		"dependencies": {
+			"minUI5Version": "1.82.2",
+			"libs": {
+				"sap.m": {
+					"minVersion": "1.82.2"
+				}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"resources": {
+			"css": [],
+			"js": [{
+				"uri": "style/style.css"
+			}]
+		},
+		"models": {
+			"": {
+				"type": "sap.ui.model.json.JSONModel",
+				"settings": {},
+				"uri": "model/MockData/SO.json",
+				"preload": false
+			},
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {},
+				"uri": "i18n/i18n.properties",
+				"preload": false,
+				"async": true
+			}
+		},
+		"rootView": {
+			"viewName": "smercul.sd.sl.view.App",
+			"type": "XML"
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewPath": "smercul.sd.sl.view",
+				"controlId": "idAppCon"
+				
+				
+			},
+			"targets": {
+				"FirstScreen": {
+					"viewName": "FirstView",
+					"viewId": "idFirstView",
+					"viewType": "XML",
+					"controlAggregation": "pages",
+					"viewLevel": 1
+				},
+				"SecondScreen": {
+					"viewName": "SecondView",
+					"viewId": "idSecondView",
+					"viewType": "XML",
+					"controlAggregation": "pages",
+					"viewLevel": 2
+				}
+			},
+			"routes": [{
+				"pattern": "",
+				"name": "FirstScreen",
+				"target": "FirstScreen"
+			}, {
+				"pattern": "PhoneDetail/{selectedItem}",
+				"name": "SecondScreen",
+				"target": "SecondScreen"
+			}]
+		}
+	}
+}

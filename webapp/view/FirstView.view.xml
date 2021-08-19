@@ -1,0 +1,13 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml"
+	controllerName="smercul.sd.sl.controller.FirstView">
+	<Page title="{i18n>XTIT_FIRST}">
+		<content>
+			<List items="{/Items}" width="600px">
+				<items >
+					<ObjectListItem type="Navigation" navigated="true" press="onPress" intro="{materialno}" icon="{imageUrl}" number="{quantity}"
+						numberUnit="{unit}" title="{decription}"></ObjectListItem>
+				</items>
+			</List>
+		</content>
+	</Page>
+</mvc:View>

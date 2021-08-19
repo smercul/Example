@@ -1,0 +1,26 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="smercul.sd.sl.controller.SecondView"
+	xmlns:f="sap.ui.layout.form" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="{i18n>XTIT_SECOND}">
+		<content>
+			<VBox>
+				<f:SimpleForm id="SimpleFormChange354" editable="true" layout="ResponsiveGridLayout" title="Details" labelSpanXL="3" labelSpanL="3"
+					labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1"
+					columnsL="1" columnsM="1" singleContainerFullSize="false">
+					<f:content>
+						<Label text="{i18n>XFLD_MAT}"/>
+						<Input id="name" value="{materialno}" enabled="false"/>
+						<Label text="{i18n>XFLD_DSC}"/>
+						<Input value="{decription}" enabled="false"></Input>
+						<Label text="{i18n>XFLD_QTY}"/>
+						<Input value="{quantity}" enabled="false"></Input>
+						<Label text="{i18n>XFLD_UNT}"/>
+						<Input value="{unit}" enabled="false"></Input>
+					</f:content>
+				</f:SimpleForm>
+			</VBox>
+			<VBox>
+				<Image src="{imageUrl}" height="500px" width="400px"/>
+			</VBox>
+		</content>
+	</Page>
+</mvc:View>
